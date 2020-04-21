@@ -1,0 +1,29 @@
+$app-colors:#669900, #663300, #660000, #CC0000,
+            #CC3300, #CC9900, #003300, #006600,
+            #009900, #00CC00, #00FF00, #66CC00,
+            #6600FF, #CC00FF, #CC33FF, #CC66FF,
+            #CC99FF, #CCCCFF, #0066FF, #0099FF,
+            #00CCFF, #00FFFF, #66FFFF, #66CCFF,
+            #CC6666, #0000FF, #3300FF, #3300CC,
+            #330099, #330066, #201a35, #812121;
+
+
+@for $index from 1 through length($app-colors) {
+    .app-color-#{$index} {
+        animation-name: colors;
+        animation-duration: 1100ms;
+        animation-fill-mode: forwards;
+        // background-color: nth($app-colors,$index); 
+    }
+
+    @keyframes colors {
+        100%{
+            background-color: nth($app-colors, $index);
+        }
+    }
+
+
+
+
+}
+
